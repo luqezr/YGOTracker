@@ -1,0 +1,36 @@
+---------------------------------------------------------------------------------------------------------------
+                                                YGOTRACKER
+---------------------------------------------------------------------------------------------------------------
+
+Ultima modificacion 27/7/20
+YGOTRACKER v1.2 actual de la WEBSERVERAPP
+
+---------------------------------------------------------------------------------------------------------------
+
+NOTAS:
+
+-Version actual de la api V7
+
+-Se actualizo a la misma version que la webApp actual (YGOTHTML 16-7-20)
+
+---------------------------------------------------------------------------------------------------------------
+
+BUGS Y FIXES :
+
+-Muestra las cartas de la coleccion pero hay que ver como enviar la coleccion a una variable JS para hacer el fetch y ver el precio actualizado de cada carta de la coleccion
+-Arreglar la busqueda avanzada (deshabilitada actualmente)
+-Agregar filtros a las colecciones
+-Agregar paginado a las colecciones
+-Agregar Wishlist
+-Poner alerta al agregar carta correctamente
+-Poder salir del menu de usuario sin tener que borrar el url
+-Revisar la calculadora de duelos
+-Importar a un .YDK (archivo de texto)
+
+---------------------------------------------------------------------------------------------------------------
+
+UX:
+
+-Arreglar estetica de las colecciones 
+-Agregar boton para ir al tope
+

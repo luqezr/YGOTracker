@@ -1,0 +1,164 @@
+ <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand">
+        <img src="/img/ygologo.png" onclick="createMiniCards()" alt="ygoLogo" id="logo">
+      </a>
+      <a class="navbar-brand">
+        <h1 class="d-none">Yu-Gi-Oh! Tracker</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" onclick="fetchNewCards()" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >New Cards<span
+                class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" onclick="getAllSets()" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">Sets<span
+                class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" onclick="getAllArchetypes()" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">Archetypes<span
+                class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/advancedSearch.html" style="cursor: pointer" >Advanced Mode<span
+                class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" onclick="fetchxRandomCards()" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">Random Cards<span
+                class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" onclick="getStaples()" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">Staples<span
+                class="sr-only"></span></a>
+          </li>
+          
+          <!-- <li class="nav-item active">
+            <a class="nav-link" onclick="getRisingCards()" style="cursor: pointer">Rising Cards<span
+                class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" onclick="getFallingCards()" style="cursor: pointer">Falling Cards<span
+                class="sr-only">(current)</span></a>
+          </li> -->
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style="cursor: pointer">
+              Format
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <span onclick='wichFormat(this.id)'><a class="dropdown-item" id="goat"
+                  style="cursor: pointer">GOAT</a></span>
+              <span onclick='wichFormat(this.id)'><a class="dropdown-item" id="ocg goat" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">OCG
+                  GOAT</a></span>
+              <span onclick='wichFormat(this.id)'><a class="dropdown-item" id="rush duel" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">RUSH
+                  DUEL</a></span>
+              <span onclick='wichFormat(this.id)'><a class="dropdown-item" id="speed duel" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">SPEED
+                  DUEL</a></span>
+              <span onclick='wichFormat(this.id)'><a class="dropdown-item" id="duel links" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">DUEL
+                  LINKS</a></span>
+            </div>
+          </li>
+
+
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" style="cursor: pointer">
+              Banlist
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <span onclick='wichBanlist(this.id)'><a class="dropdown-item" id="tcg"
+                  style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">TCG</a></span>
+              <span onclick='wichBanlist(this.id)'><a class="dropdown-item" id="ocg"
+                  style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">OCG</a></span>
+              <span onclick='wichBanlist(this.id)'><a class="dropdown-item" id="goat" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">Goat
+                  Format</a></span>
+            </div>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="/androidApp.html" style="cursor: pointer" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">ABOUT<span
+                class="sr-only">(current)</span></a>
+          </li>
+
+
+          <!--               
+              <li class="nav-item active">
+                <a class="nav-link" onclick="openNav()"style="cursor: pointer" >Advanced Search<span class="sr-only">(current)</span></a>
+              </li> -->
+
+        </ul>
+
+
+
+
+      </div>
+      <form method="GET" action="" name="search" autocomplete="off">
+        <div class="input-group" class="autocomplete">
+          <input id="card_name" name="fname" type="text" class="form-control search-menu" autofocus
+            placeholder="Search by card name/id...">
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <button type="submit" id="send" class="fa fa-search" aria-hidden="true"></button>
+            </span>
+
+          </div>
+        </div>
+      </form>
+
+
+
+        <ul class="navbar-nav ml-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{user.name}}
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              {{!-- <a class="dropdown-item" href="/notes">All Notes</a>
+              <a class="dropdown-item" href="/notes/add">Add A Note</a>
+              <a class="dropdown-item" href="/decks">All Decks</a>
+              <a class="dropdown-item" href="/decks/add">Add A Deck</a>--}}
+              <a class="dropdown-item" href="/collections">My Collection</a> 
+              {{!-- <a class="dropdown-item" href="/collections/add">Add A Collection</a> --}}
+              <a class="dropdown-item" href="/about">About</a>
+
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/users/logout">Logout</a>
+            </div>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signin">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signup">Register</a>
+          </li> 
+        {{/if}}
+      </ul>
+
+
+          </div>
+
+          
+        </nav>
+
+</header>

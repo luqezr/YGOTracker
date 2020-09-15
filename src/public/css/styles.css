@@ -1,0 +1,657 @@
+img[src*="000webhost"]{   
+   
+    display: none !important;   
+    
+    }
+*{
+    box-sizing: border-box
+}
+a, table a {
+   color: #007bff !important;
+}
+
+.about{
+    padding: 2%;
+    background-color: rgba(255,255,255, 0.7);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    
+}
+
+body{
+    background-image: url("/img/background.jpg");
+    background-repeat: repeat;
+}
+
+#bodyAdv{
+    background-image: url("/img/backgroundAdv.jpg");
+    background-repeat: repeat;
+}
+
+@font-face{
+    font-family: belwe;
+    src: url(/ttf/belwe\ light\ bt.ttf);
+    
+    font-family: belweCondensed;
+    src: url(/ttf/belwe\ condensed\ bt.ttf);
+    
+    font-family: CardEffect;
+    src: url(/ttf/CardEffect.ttf);
+
+    font-family: CardTitle;
+    src: url(/ttf/CardTitle.ttf);
+    
+    font-family: MatrixTitle;
+    src: url(/ttf/MatrixTitle.ttf);
+
+}
+
+
+.cardImages{
+    width: 400px;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.modalCardImage .cardImages, .modal .modal-header, .modal .modal-header img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.modalCardImage, .modal-content, .cardModal{
+background-color:rgba(0,0,0, 0.9); ;
+}
+
+
+
+ .modalCardImage .modal-header, .modalCardImage .modal-footer, .modal-footer button,.modalCardImage .modal-content{ 
+    background-color: rgba(0,0,0, 0.9);
+
+}
+/* 
+.modalCardImage .modal-footer{ 
+    border-top: 1px solid rgba(125,125,125, 0);
+   
+} */
+
+.modalImage .modal-header, .modalImage .modal-footer, .modalImage .modal-body{
+    border:5px;
+    padding:5px;
+}
+
+
+.modal-body, .modal-header button span{
+    color: rgb(230, 230, 230);
+}
+
+.modal-body th, .modal-body td,.modal-body tr{
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.modal-footer{
+    border: none;
+}
+
+#signup div, #signin div{
+    background-color: rgba(0,0,0, 0.5);
+    color: rgb(230, 230, 230);
+}
+
+#signup button, #signin button {
+    color: rgba(230,230,230, 0.5);
+    border: 1px rgba(230,230,230, 0.5) solid;
+}
+
+button {
+    color: black;
+    background-color: black;
+}
+.advancedSearchBar{
+    color: yellowgreen;
+}
+
+.navbar{
+    justify-content: flex-start;
+}
+
+table a { 
+    font-weight: 600;
+    color: #007bff;
+}
+table th{
+    padding: 2px;
+    text-align: center;
+}
+table th:first-child{
+    text-align: left;
+    padding-left: 5px;
+}
+table td{
+    padding: 5px;
+}
+
+a:hover { 
+    color: rgb(248, 41, 82);
+    text-decoration: none;
+}
+
+th, td{
+    border: 1px black solid;
+    padding: 2px;
+}
+
+.addButton{
+    border: none;
+    padding-left: 5px;
+}
+
+h2{
+    font-family: belweCondensed;
+    font-weight: 500;
+    padding: 1%;
+}
+h2 a{
+    color: rgb(37, 245, 71)
+}
+
+header nav {
+    font-size: 12pt;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header form {
+    width:50%;
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#notesDiv{
+    padding: 7px;
+}
+
+#decksDiv{
+    padding: 7px;
+}
+
+#logo{
+    width: 105px;
+}
+.levelIcon{
+    width: 20px
+}
+
+#advancedSearchBar{
+    padding: 2%;
+    background-color: rgba(255,255,255, 0.7);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    
+}
+
+
+#setsFilterBar{
+    font-size: 18pt;
+    margin-left: 2%;
+}
+
+
+table{
+    width: 100%;
+}
+
+.setCode, .setRarity, .setPrice{
+    text-align: center;
+}
+
+.cardGrid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1%;
+    padding: 7px;
+}
+ 
+.cardInfo{
+    font-family: MatrixTitle;
+font-weight: 520;
+font-size: 12pt;
+} 
+
+.cardInfo h5{
+font-family: MatrixTitle;
+font-weight: 520;
+font-size: 18pt;
+}
+
+.cardDescription{
+    font-family: CardEffect;
+    font-weight: 520;
+    font-size: 14pt;
+}
+/* 
+.cardInfo tr{
+    font-family: CardEffect;
+    font-weight: 520;
+    font-size: 15pt;
+} */
+/* 
+.cardInfo div{
+font-family: CardEffect;
+} */
+
+.cardGrid h5{
+    font-variant: small-caps;
+    font-family: Matrix;
+}
+
+.setImages{
+width: 0px;
+}
+
+.setGrid{
+    padding: 10px;
+}
+
+.sets{
+    padding: 5px;
+}
+/* 
+#setResults{
+    display: block;
+    width: 100%;
+} */
+
+.archetype{
+    padding: 5px;
+ }
+
+.archetypeGrid{
+    padding: 10px;
+}
+
+
+
+
+nav, nav div, header, header div, header a, header button, header input, header input :hover{
+    background-color: black !important;
+    color: rgb(250, 250, 250)!important;
+   
+}
+
+header form span {
+padding: 0 !important;
+background-color: black !important;
+}
+
+header form button {
+    border: none !important
+}
+
+ .cardInfo{
+    padding: 0px 20px;
+    width: 100%;
+}
+
+#wait{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#cardResults{
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+}
+#miniCardResults{
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.showRisingAndFallingInfo{
+    width: 100%;
+}
+
+.miniCard{
+    width: 310px ;
+}
+
+.miniCard img{
+    width: 300px;
+}
+
+.modal-backdrop.show {
+    opacity: .0;
+}
+
+.btn-primary:hover{
+    
+    background-color: rgba(255,255,255, 0);
+    color: rgba(255,255,255, 0);
+    border-color: rgba(255,255,255, 0);
+}
+.btn-primary{
+    
+    background-color: rgba(255,255,255, 0);
+    color: rgba(255,255,255, 0);
+    border-color: rgba(255,255,255, 0);
+}
+
+.showCardInfo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+.cards, .sets, .archetype{
+    background-color: rgba(255,255,255, 0.3)
+   }
+   
+   .cardGrid, .setGrid ,.archetypeGrid{
+     background-color: rgba(255,255,255, 0.7)
+   }
+   
+  .logo {
+    width: 30%;
+  }
+  
+  #subtitle {
+    color: gainsboro;
+    font-family: CardTitle;
+    
+  }
+  
+  #advancedSearchBar img{
+    width: 25px;
+  }
+  
+  /*the container must be positioned relative:*/
+  .autocomplete {
+    position: relative;
+    display: inline-block;
+  }
+  
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input[type=text] {
+    /* background-color: #f1f1f1; */
+    width: 100%;
+  }
+  
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+  }
+  
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+  }
+  
+
+  .modal-footer .shareButton button{ 
+
+    background-color: rgba(255,255,255, 0)!important;
+    color: rgba(255,255,255, 1)!important;
+
+  }
+
+  .shareButton button { 
+    background-color: rgba(255,255,255, 0)!important;
+    color: rgba(0,0,0, 1)!important;
+  }
+  
+  /* 
+  body {
+    background: #1488CC;  /* fallback for old browsers 
+    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  Chrome 10-25, Safari 5.1-6
+    background: linear-gradient(to right, #2B32B2, #1488CC); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+   } */
+
+
+
+@media (max-width: 1366px) {
+
+    .cardImages{
+        width: 300px;
+    }
+
+    h2{ 
+        padding: 1%;
+        font-size: 18pt;
+    }
+    
+    header form {
+        width:50%;
+    }
+
+
+
+  }
+
+
+
+@media (max-width: 600px) {
+
+    table{
+        width: 100%;
+    }
+    .cardImages{
+        width: 250px;
+    }
+
+    h2{ 
+        padding: 1%;
+        font-size: 18pt;
+    }
+    
+    header form {
+        width:100%;
+    }
+
+    .navbar{
+        width: 90%;
+    }
+
+    .navbar-toggler{
+        width: 50%;
+    }
+
+
+    #cardResults{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        padding: 1%;
+        margin: 1%;
+    }
+    
+    .cardInfo{
+        font-family: MatrixTitle;
+        text-align: center;
+        font-size: 12pt;
+        font-weight: 520;
+        }
+
+
+        .cardInfo h5{
+            font-weight: 520;
+            font-size: 18pt;
+            }
+
+        .cardInfo tr{
+            font-size: 12pt;
+            font-weight: 520;
+            }
+
+    .cardDescription{
+        font-family: CardEffect;
+        font-weight: 540;
+        font-size: 13pt;
+    }
+        .cardInfo div{
+        font-family: CardEffect;
+        }
+        .cardGrid h5{
+        
+            font-family: CardTitle;
+            text-align: center;
+        }
+        
+    .cardGrid{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column; 
+    }
+    .showCardInfo{
+        display: flex!important;
+        justify-content: space-evenly!important;
+        align-items: center!important;
+        flex-direction: column!important; 
+    }
+
+    .cardButtons{
+        
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+    }
+  }
+
+  
+@media (max-width: 400px) {
+
+
+    .modalCardImage .cardImages{
+        height: 100%;
+        width: 100%;
+    }
+
+    .cardImages{
+        width: 150px;
+    }
+
+    .cardInfo tr{
+        font-size: 10pt;
+        font-weight: 520;
+        }
+
+    .cardInfo img {
+        width: 10px;
+    }
+    
+    .cardInfo{
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+ 
+    .cardInfo h5{
+        font-size: 13pt;
+        font-weight: 520;
+        font-family: CardTitle;
+        text-align: center;    
+    
+    } 
+
+    #setTitles{
+        font-size: 10pt;
+        margin: 0;
+        padding: 1%;
+    }
+    
+
+    .cardInfo img{
+        width: 18px!important;
+    }
+
+    .cardInfo td{
+        margin: 0;
+        padding-left: 0.5%;
+        padding-right: 0.5%;
+        font-size: 9pt;
+    }
+    p{
+       margin: 0;
+       padding: 0;}
+
+
+    .cardDescription{
+        font-family: CardEffect;
+        font-weight: 540;
+        font-size: 12pt;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    #advancedSearchBar{
+        font-size: 9pt;
+    }
+
+    #advancedSearchBar input{
+        font-size: 9pt;
+    }
+    #advancedSearchBar button{
+        font-size: 9pt;
+    }
+    #advancedSearchBar img{
+        width: 20px;
+    }
+    #advancedSearchBar label{
+       font-size: 9pt;
+    }
+
+}

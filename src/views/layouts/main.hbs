@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Keep track of all your Yu-Gi-Oh! Cards with Yugiohtracker !">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/png" href="/img/favicon.ico" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Yu-Gi-Oh! Tracker</title>
+</head>
+
+<body>
+
+      <!-- 
+
+           _____
+          |A .  | _____
+          | /.\ ||A ^  | _____
+          |(_._)|| / \ ||A _  | _____
+@luqezr   |  |  || \ / || ( ) ||A_ _ |
+          |____V||  .  ||(_'_)||( v )|
+                 |____V||  |  || \ / |
+                        |____V||  .  |
+                               |____V|
+
+
+info@yugiohtracker.com
+     -->
+
+ {{> navigation }}
+<main class="page-content pt-1">
+          {{> messages }}
+          {{> errors }}
+
+{{!-- 
+      <div class="input-group mb-3">
+      <div class="input-group-prepend d-none">
+        <label class="input-group-text" for="inputGroupSelect01">Results Per Page</label>
+      </div>
+      <select class="custom-select" id="howManyPerPage">
+        <option value="10" myTag="10">10</option>
+        <option value="20" myTag="20" selected>20</option>
+        <option value="50" myTag="50">50</option>
+        <option value="100" myTag="100">100 (this make take a while)</option>
+        <option value="200" myTag="200">200 (this make take a while)</option>
+        <option value="500" myTag="500">All (this make take a while)</option>
+      </select>
+      
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Show Images</label>
+      </div>
+      <select class="custom-select" id="showImages">
+        <option selected>...</option>
+        <option value="yes" myTag="yes" >Yes</option>
+        <option value="no" myTag="no" >No</option>
+      </select> 
+      </div> --}}
+
+
+
+          {{{ body }}}
+
+
+
+</main>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144329642-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144329642-1');
+</script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+  <script src="/js/mainScript.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7f939a6d6f.js"></script>
+  <script src="https://ygoprodeck.com/ygoprodeck.js"></script>
+
+  <script src="/js/mainScript.js"></script>
+  <script src="/js/showNewCards.js"></script>
+  <script src="/js/showRandomCards.js"></script>
+  <script src="/js/cardSearcher.js"></script>
+  <script src="/js/getBySet.js"></script>
+  <script src="/js/getAllSets.js"></script>
+  <script src="/js/getAllCards.js"></script>
+  <script src="/js/getStaples.js"></script>
+  <script src="/js/getAllArchetypes.js"></script>
+  <script src="/js/searchByArchetype.js"></script>
+  <script src="/js/getBanlist.js"></script>
+  <script src="/js/getByID.js"></script>
+  <script src="/js/autocompleteForm.js"></script>
+  <script src="/js/getByFormat.js"></script>
+  <script src="/js/getBySetCode.js"></script>
+  <script src="/js/whatToLoad.js"></script>
+</body>
+
+</html>
