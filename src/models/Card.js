@@ -2,13 +2,10 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const CardSchema = new Schema({
-    id: {
-        type: String,
-        required: true
-    },
-    name: {
-        type: String,
-        required: false
+    cardId: {
+        type: Number,
+        required: true,
+        index: true
     },
     name: {
         type: String,
@@ -27,15 +24,15 @@ const CardSchema = new Schema({
         required: false
     },
     atk: {
-        type: String,
+        type: Number,
         required: false
     },
     def: {
-        type: String,
+        type: Number,
         required: false
     },
     level: {
-        type: String,
+        type: Number,
         required: false
     },
     race: {
@@ -62,19 +59,43 @@ const CardSchema = new Schema({
         type: String,
         required: false
     },
-    set: {
-        type: String,
-        required: false
-    },
     archetype: {
         type: String,
         required: false
     },
-
+    card_images: {
+        type: Array,
+        required: false
+    },
+    misc_info: {
+        type: Array,
+        required: false
+    },
+    card_sets: {
+        type: Array,
+        required: false
+    },
+    set_code: {
+        type: String,
+        required: true,
+        index: { unique: true }
+    },
+    set_rarity: {
+        type: String,
+        required: true
+    },
+    set_name: {
+        type: String,
+        required: true
+    },
+    set_rarity_code: {
+        type: String,
+        required: true
+    }
 
 
 });
 
-const newCard = mongoose.model('Card', CollectionSchema);
+const newCard = mongoose.model('Card', CardSchema);
 
 module.exports = newCard

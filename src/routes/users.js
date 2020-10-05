@@ -30,8 +30,8 @@ router.post('/users/signup', async (req, res) => {
       // Saving a New User
       const newUser = new User({name, email, password});
       newUser.password = await newUser.encryptPassword(password);
-      const newCollection = new Collection({user: newUser.id})
-      newUser.collection.push(newCollection)
+      const newCollection = new Collection()
+      newUser.collections.push(newCollection)
       await newUser.save();
       await newCollection.save();
       req.flash('success_msg', 'You are registered.');

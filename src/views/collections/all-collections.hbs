@@ -1,68 +1,46 @@
 <div class="row" id="decksDiv">
-  {{#each collections}}
+  {{#each  }}
   <div class="col-md-12">
     <div class="card">
       <div class="card-body">
-      
-          <h2 name="{{_id}}">{{title}}</h2>
+
+        <h2 name="{{_id}}">{{title}}</h2>
         {{!-- <li id="aCard">{{ cards }}</li><a href="/collections/edit/{{_id}}"> <i class="fas fa-edit"></i></a> --}}
         {{!-- PARA HACER FETCH AL SETCODE https://db.ygoprodeck.com/api/v7/cardsetsinfo.php?setcode=jump-en006 --}}
 
 
         {{#each cards}}
-  
 
-		<div class="cardGrid" >
-			<img src="{{this.cardImage}}" class="card-img-bottom cardImages" id='{{this.fname}}' alt="{{this.name}}" >
-			<div class='cardInfo'  id='{{this.name}}'>
-			           
-                    <a data-name="{{this.name}}" target="_blank">
-                        <h5 class="modal-title" id="exampleModalLongTitle">
-                            {{this.name}}
-                        </h5>
-                    </a>
-				
-				<img src="/img/typeOfCard/{{this.type}}.jpg" style="width : 20px" class="card-img-bottom" alt="Race Icon"> {{this.type}} / <img src="/img/race/{{this.race}}.png" style="width : 20px" class="card-img-bottom" alt="Race Icon"> {{this.race}} / <img src="/img/attribute/{{this.attribute}}.png" style="width : 20px" class="card-img-bottom" alt="Attribute Icon"> {{this.attribute}} /  <img src="/img/${levelOrRankOrLink}.png" style="width : 20px" class="card-img-bottom" alt="Level Icon">  {{this.level}} / Archetype : <span onclick='cardArchetype(this.id)'> <a href="#" class='getByArchetype' id='{{this.archetype}}'>  {{this.archetype}}  </a></span>  /  Card ID : {{this.id}} <br>
-			
-				<ul>
-				<li>{{this.desc}}</li>
-				<li><b> ATK </b>: <img src="/img/attack.png" style="width : 18px" class="card-img-bottom" alt="Atk Icon"> {{this.atk}}</li>
-				<li><b> DEF </b>: <img src="/img/defense.png" style="width : 18px" class="card-img-bottom" alt="Def Icon"> {{this.def}} </li>
-				</ul>
-				<table id="${id}" >
-				<tr>
-				<th>Set Name</th>
-				<th>Rarity</th>
-				<th>Code</th>
-				<th>Price</th>
-				</tr>
-        <tr>
-        <td><span onclick='cardSet(this.id)'>  <a id="{{this.cardSetId}}" class='getBySet' href="#">{{this.cardSetName}} </a></span>  </td>
-				<td class="setRarity">  {{this.cardSetRarity}}  </td>
-				<td class="setCode"><span onclick='cardSet(this.id)'>  {{this.cardSetId}}  </span>  </td> 
-				<td class="setPrice"> ??? </td>
-				</tr>
-				</table>
-				<br>
-			</div>
-		</div>
-	  	
-		
-	
-          
-          {{!-- {{this}} --}}
 
-  
+        <div class="cardGrid">
+          <img src="{{this.cardImage}}" class="card-img-bottom cardImages" id='{{this.fname}}' alt="{{this.name}}">
+          <div class='cardInfo' id='{{this.name}}'>
+
+            <a data-name="{{this}}" target="_blank">
+              <h5 class="modal-title" id="exampleModalLongTitle">
+                {{this}}
+              </h5>
+            </a>
+
+          </div>
+        </div>
+
+
+
+
+        {{!-- {{this}} --}}
+
+
         {{/each}}
         {{!-- <form action="/collections/delete/{{_id}}?_method=DELETE" method="POST">
           
           <input type="hidden" name="_method" value="DELETE">
           <button type="submit" class="btn btn-danger btn-block btn-sm">remove</button>
         </form> --}}
-      
-       
+
+
         <!-- DELETE REQUEST -->
-        
+
       </div>
     </div>
   </div>
@@ -78,6 +56,6 @@
   </div>
   {{/each}}
 
- <script src="public/js/mainScript.js"></script>
+  <script src="public/js/mainScript.js"></script>
 
 </div>

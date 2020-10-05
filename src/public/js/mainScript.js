@@ -32,6 +32,27 @@ function copyCardID(e) {
 }
 
 
+
+// Ejemplo implementando el metodo POST:
+async function addToCollection(set_code) {
+	// Opciones por defecto estan marcadas con un *
+	const response = await fetch("/addToCollection", {
+		method: 'POST', // *GET, POST, PUT, DELETE, etc.
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ set_code }) // body data type must match "Content-Type" header
+	});
+	const json = await response.json(); // parses JSON response into native JavaScript objects
+
+	console.log(json);
+	debugger
+	if (true) {
+
+	}
+}
+
+
 function copy(text) {
 	var input = document.createElement('textarea');
 	input.innerHTML = text;
@@ -113,7 +134,7 @@ function clearScreenForMiniCards() {
 
 
 
-function addToCollection(e) {
+function addToCollectionssss(e) {
 	e = e || window.event;
 	e = e.target || e.srcElement
 	myCardCollection.push(e.id)
@@ -487,27 +508,15 @@ console.log(card_sets.sort((a, b) => {
 		   <tr>
 		   <td><span onclick='cardSet(this.id)'>  <a id="${setName[b].set_name}" class='getBySet' href="#"> ${setName[b].set_name} </a></span>  </td>
 		   <td class="setRarity">  ${set_rarity}  </td>
-		   <td class="setCode"><span onclick='cardSet(this.id)'>  ${ setName[b].set_code}  </span>  </td> 
+		   <td class="setCode"><span onclick='cardSet(this.id)'>  ${setName[b].set_code}  </span>  </td> 
 		   <td class="setPrice"> $${setName[b].set_price}  </td>
 		   <td class="addButton"> 
 		   
-		   <form method="post" action="/addToCollection" style="display: inline">
-		   <input type="hidden" name="Archetype"  value="${archetype}">
-		   <input type="hidden" name="atk"  value="${atk}">
-		   <input type="hidden" name="attribute"  value="${attribute}">
-		   <input type="hidden" name="cardImage"  value="${cardImage}">
-		   <input type="hidden" name="def"  value="${def}">
-		   <input type="hidden" name="desc"  value="${desc}">
-		   <input type="hidden" name="id"  value="${id}">
-		   <input type="hidden" name="level"  value="${level}">
-		   <input type="hidden" name="name"  value="${name}">
-		   <input type="hidden" name="race"  value="${race}">
-		   <input type="hidden" name="type"  value="${type}">
+		   <button type="button" onclick="addToCollection('${set_code}')" >Add to my collection</button>
+		   <!--<form method="post" action="/addToCollection" style="display: inline">
 		   <input type="hidden" name="cardSetId"  value="${set_code}">
-		   <input type="hidden" name="cardSetName"  value="${set_name}">
-		   <input type="hidden" name="cardSetRarity"  value="${set_rarity}">
 		   <input type="submit" name="submit" value="Collection" style="display: inline" >
-		   </form>
+		   </form>-->
 
 	   </tr>
 					
@@ -947,25 +956,12 @@ function createMiniCard(card) {
 		   <tr>
 		   <td><span onclick='cardSet(this.id)'>  <a id="${setName[b].set_name}" class='getBySet' href="#"> ${setName[b].set_name} </a></span>  </td>
 		   <td class="setRarity">  ${set_rarity}  </td>
-		   <td class="setCode"><span onclick='cardSet(this.id)'>  ${ setName[b].set_code}  </span>  </td> 
+		   <td class="setCode"><span onclick='cardSet(this.id)'>  ${setName[b].set_code}  </span>  </td> 
 		   <td class="setPrice"> $${setName[b].set_price}  </td>
 		   <td class="addButton"> 
 		   
 		   <form method="post" action="/addToCollection" style="display: inline">
-		   <input type="hidden" name="Archetype"  value="${archetype}">
-		   <input type="hidden" name="atk"  value="${atk}">
-		   <input type="hidden" name="attribute"  value="${attribute}">
-		   <input type="hidden" name="cardImage"  value="${cardImage}">
-		   <input type="hidden" name="def"  value="${def}">
-		   <input type="hidden" name="desc"  value="${desc}">
-		   <input type="hidden" name="id"  value="${id}">
-		   <input type="hidden" name="level"  value="${level}">
-		   <input type="hidden" name="name"  value="${name}">
-		   <input type="hidden" name="race"  value="${race}">
-		   <input type="hidden" name="type"  value="${type}">
 		   <input type="hidden" name="cardSetId"  value="${set_code}">
-		   <input type="hidden" name="cardSetName"  value="${set_name}">
-		   <input type="hidden" name="cardSetRarity"  value="${set_rarity}">
 		   <input type="submit" name="submit" value="Collection" style="display: inline" >
 		   </form>
 
